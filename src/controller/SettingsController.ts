@@ -14,9 +14,9 @@ class SettingsController {
     } catch(error) {
       return res.status(400).json({
         message: error.message,
-      })
+      });
     }
   }
 }
 
-export { SettingsController }
+export { SettingsController };
