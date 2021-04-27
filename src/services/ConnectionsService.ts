@@ -10,6 +10,7 @@ interface IConenctionCreate {
 }
 
 class ConnectionsService {
+
   private connectionsRepository: Repository<Connection>
 
   constructor() {
@@ -27,6 +28,12 @@ class ConnectionsService {
     await this.connectionsRepository.save(connection);
 
     return connection;
+  }
+
+  async findByUserId(user_id: string) {
+    return await this.connectionsRepository.findOne({
+      user_id
+    })
   }
 }
 
