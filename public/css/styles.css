@@ -323,9 +323,14 @@ input[type="text"]:focus {
   font-family: "Roboto", sans-serif;
 }
 
-.admin_date {
+.user_date {
   font-size: 10px;
   color: #fff;
+}
+
+.admin_date {
+  font-size: 10px;
+  color: #000;
 }
 
 .in_support {
