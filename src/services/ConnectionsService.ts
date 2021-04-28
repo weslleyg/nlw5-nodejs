@@ -40,6 +40,12 @@ class ConnectionsService {
     return await this.connectionsRepository.find({
       where: { admin_id: null},
       relations: ["user"]
+    });
+  }
+
+  async findBySocketID(socket_id: string) {
+    return await this.connectionsRepository.findOne({
+      socket_id
     })
   }
 }
